@@ -1,22 +1,6 @@
 import re
 
-import os.path,subprocess
-from subprocess import STDOUT,PIPE
-
-
-
-def execute_java(java_file, stdin):
-    java_class,ext = os.path.splitext(java_file)
-    cmd = ['java', java_class]
-    proc = subprocess.Popen(cmd, stdin=PIPE, stdout=PIPE, stderr=STDOUT)
-    stdout,stderr = proc.communicate(stdin)
-    #print ('This was "' + stdout + '"')
-
-
-
-
 from check50 import *
-
 
 class isPrime(Checks):
 
@@ -26,16 +10,14 @@ class isPrime(Checks):
         self.require("isPrime.java")
 
    @check("exists")
-   def compile_java(java_file):
-        """isPrime compiles"""   
-        subprocess.check_call(['javac', isPrime.java]).exit(0)
-        #def compiles(self):
-        #self.spawn("compile_java('isPrime.java')").exit(0)
+   def compiles(self):
+        """isPrime compiles""" 
+        self.spawn(javac isPrime.java).exit(0)
 
     @check("exists")
     def test2(self):
         """input of 2 yields output of true"""
-        self.spawn("execute_java('isPrime.java', '2')").stdout("true\n", "true\n").exit(0)
+        self.spawn("java isPrime").stdin("2").stdout("true\n", "true\n").exit(0)
 
     @check("exists")
     def test_reject_negative(self):
