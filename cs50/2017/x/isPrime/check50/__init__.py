@@ -20,3 +20,8 @@ class isPrime(Checks):
         """input of 2 yields output of true"""
         self.spawn("./isPrime").stdin("2").stdout("true\n", "true\n").exit(0)
 
+    @check("compiles")
+    def test_reject_negative(self):
+        """rejects a negative input like -.1"""
+        self.spawn("./isPrime").stdin("-1").reject()
+
