@@ -27,7 +27,7 @@ class isPrime(Checks):
 
     @check("compiles")
     def test101(self):
-      #  """input of 101 yields output of true"""
+        """input of 101 yields output of true"""
         self.spawn("./isPrime").stdin("101").stdout("true\n", "true\n").exit(0)
 
     @check("compiles")
