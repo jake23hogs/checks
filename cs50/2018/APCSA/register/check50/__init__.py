@@ -18,7 +18,8 @@ class Register(Checks):
     @check("compiles")
     def test2495(self):
         """input of 24.95 yields outputs of 24.95, 1.80887, 26.7589"""
-        self.spawn("./register").stdin("24.95").stdout(24.95, "24.95\n").stdout(1.80887, "1.80887\n").stdout(26.7589, "26.7589\n").exit(0)
+        self.spawn("./register").stdin("24.95").stdout("Here is your receipt:\n", "Here is your receipt:\n").stdout("Price: 24.95\n", "Price: 24.95\n").stdout("Tax: 1.80887\n", "Tax: 1.80887\n").stdout("Total Cost: 26.76\n", "Total Cost: 26.76\n").exit(0)
+
 
    
     @check("compiles")
