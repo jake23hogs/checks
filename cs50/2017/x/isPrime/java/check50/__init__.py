@@ -9,15 +9,15 @@ class isPrime(Checks):
         """isPrime exists"""
         self.require("isPrime.java")
 
-   @check("exists")
-   def compiles(self):
-       """isPrime compiles""" 
-       self.spawn("javac isPrime.java").exit(0)
+   #@check("exists")
+   #def compiles(self):
+   #    """isPrime compiles""" 
+   #    self.spawn("javac isPrime.java").exit(0)
 
     @check("exists")
     def test2(self):
         """input of 2 yields output of true"""
-        self.spawn("java isPrime").stdin("2").stdout("true\n", "true\n").exit(0)
+        self.spawn("java isPrime").stdin("2").stdout("true", "true")
 
     @check("exists")
     def test_reject_negative(self):
