@@ -9,10 +9,10 @@ class isPrime(Checks):
         """isPrime exists"""
         self.require("isPrime.java")
 
-   #@check("exists")
-   #def compiles(self):
-   #    """isPrime compiles""" 
-   #    self.spawn("javac isPrime.java").exit(0)
+   @check("exists")
+   def compiles(self):
+       """isPrime compiles""" 
+       self.spawn("javac isPrime.java").exit(0)
 
     @check("exists")
     def test2(self):
