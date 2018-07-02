@@ -17,7 +17,7 @@ class isPrime(Checks):
     @check("exists")
     def test2(self):
         """input of 2 yields output of true"""
-        self.spawn("java isPrime").stdin(2).stdout("true\n", "true\n")
+        self.spawn("java isPrime").stdin("2").stdout("true\n", "true\n")
 
     @check("exists")
     def test_reject_negative(self):
