@@ -7,7 +7,7 @@ class Prime(Checks):
     @check()
     def exists(self):
         """Prime exists"""
-        self.require("Prime.java")
+        self.require("Primes.java")
 
    @check("exists")
    def compiles(self):
