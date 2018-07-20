@@ -2,7 +2,7 @@ import re
 
 from check50 import *
 
-class Prime(Checks):
+class prime(Checks):
 
     @check()
     def exists(self):
