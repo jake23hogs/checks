@@ -1,16 +1,16 @@
 from check50 import *
 
 class Prime(Checks):
-
+    
     @check()
     def exists(self):
         """Prime exists"""
         self.require("Prime.java")
 
-   @check("exists")
-   def compiles(self):
-       """Prime compiles""" 
-       self.spawn("javac Prime.java").exit(0)
+    @check("exists")
+    def compiles(self):
+        """Prime compiles""" 
+        self.spawn("javac Prime.java").exit(0)
 
     @check("compiles")
     def test2(self):
