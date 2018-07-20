@@ -1,5 +1,3 @@
-import re
-
 from check50 import *
 
 class Prime(Checks):
