@@ -2,10 +2,10 @@ from check50 import *
 
 class Prime(Checks):
 
-    #@check()
-    #def exists(self):
-     #   """Prime exists"""
-      #  self.require("Prime.java")
+    @check()
+    def exists(self):
+        """Prime exists"""
+        self.require("Prime.java")
 
    @check("exists")
    def compiles(self):
