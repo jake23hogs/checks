@@ -54,11 +54,6 @@ class MarioLess(Checks):
             .stdin("2").stdout(File("2.txt")).exit(0)
 
     @check("compiles")
-    def test_reject_foo(self):
-        """rejects a non-numeric height of "foo" """
-        self.spawn("java MarioLess").stdin("foo").reject()
-
-    @check("compiles")
     def test_reject_empty(self):
         """rejects a non-numeric height of "" """
         self.spawn("java MarioLess").stdin("").reject()
