@@ -22,8 +22,8 @@ class Distance(Checks):
     
     @check("compiles")
     def distance1(self):
-        """inputs of x1 = -2, y1 = -1, x2 = 2, y2 = 1 yields Distance = 2.2"""
-        self.spawn("java Distance").stdin("-2").stdin("-1").stdin("2").stdin("1").stdout("Distance = 2.2\n", "Distance = 2.2\n").exit(0)
+        """inputs of x1 = -2, y1 = -1, x2 = 2, y2 = 1 yields Distance = 4.5"""
+        self.spawn("java Distance").stdin("-2").stdin("-1").stdin("2").stdin("1").stdout("Distance = 4.5\n", "Distance = 4.5\n").exit(0)
         
     @check("compiles")
     def test_reject_negative(self):
