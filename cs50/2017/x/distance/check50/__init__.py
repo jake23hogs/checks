@@ -21,7 +21,7 @@ class Distance(Checks):
         self.spawn("java Distance").stdin("3").stdin("-2").stdin("-1").stdin("5").stdout("Distance = 8.1\n", "Distance = 8.1\n").exit(0)
     
     @check("compiles")
-    def distance1(self):
+    def distance2(self):
         """inputs of x1 = -2, y1 = -1, x2 = 2, y2 = 1 yields Distance = 4.5"""
         self.spawn("java Distance").stdin("-2").stdin("-1").stdin("2").stdin("1").stdout("Distance = 4.5\n", "Distance = 4.5\n").exit(0)
         
