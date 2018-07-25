@@ -13,7 +13,7 @@ class Distance(Checks):
     @check("exists")
     def compiles(self):
         """distance compiles"""
-        self.spawn("java Distance").exit(0)
+        self.spawn("javac Distance.java").exit(0)
 
     @check("compiles")
     def distance1(self):
