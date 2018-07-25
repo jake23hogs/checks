@@ -7,7 +7,7 @@ class MarioLess(Checks):
 
     @check()
     def exists(self):
-        """MarioLess exists"""
+        """Mario exists"""
         self.require("Mario.java")
         self.add("1.txt", "2.txt", "23.txt")
 
