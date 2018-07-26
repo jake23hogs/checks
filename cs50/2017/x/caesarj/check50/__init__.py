@@ -39,6 +39,6 @@ class Caesar(Checks):
         self.spawn("java Caesar 65").stdin("barfoo").stdout("ciphertext:\s*onesbb\n", "ciphertext: onesbb\n").exit(0)
     
     @check("compiles")
-    def handles_no_argv(self):
-        """handles lack of argv[1]"""
+    def handles_no_args(self):
+        """handles lack of args[1]"""
         self.spawn("java Caesar").exit(1)
