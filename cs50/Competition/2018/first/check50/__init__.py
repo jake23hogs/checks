@@ -1,5 +1,6 @@
 from check50 import *
 
+
 class Divisible1(Checks):
 
     @check()
@@ -7,10 +8,10 @@ class Divisible1(Checks):
         """Demo exists"""
         self.require("Divisible1.java")
 
-   @check("exists")
-   def compiles(self):
-       """Divisible1 compiles""" 
-       self.spawn("javac Divisible1.java").exit(0)
+    @check("exists")
+    def compiles(self):
+        """Divisible1 compiles""" 
+        self.spawn("javac Divisible1.java").exit(0)
 
     @check("compiles")
     def test1(self):
