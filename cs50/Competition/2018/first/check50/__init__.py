@@ -9,8 +9,8 @@ class Divisible1(Checks):
 
    @check("exists")
    def compiles(self):
-        """Divisible1 compiles""" 
-        self.spawn("javac Divisible1.java").exit(0)
+       """Divisible1 compiles""" 
+       self.spawn("javac Divisible1.java").exit(0)
 
     @check("compiles")
     def test1(self):
