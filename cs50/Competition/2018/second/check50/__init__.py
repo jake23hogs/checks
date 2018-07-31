@@ -10,15 +10,15 @@ class Divisible2(Checks):
 
     @check("exists")
     def compiles(self):
-        """Divisible1 compiles""" 
+        """Divisible2 compiles""" 
         self.spawn("javac Divisible2.java").exit(0)
 
     @check("compiles")
     def test1(self):
-        """input of 10 5 correctly gives output of DIVISIBLE"""
-        self.spawn("java Divisible2").stdin("10").stdin("5").stdout("DIVISIBLE\n", "DIVISIBLE\n")
+        """input of 3 correctly gives output of PRIME"""
+        self.spawn("java Divisible2").stdin("3").stdout("PRIME\n", "PRIME\n")
 
     @check("compiles")
     def test2(self):
-        """input of 10 3 correctly gives output of NOT DIVISIBLE"""
-        self.spawn("java Divisible2").stdin("10").stdin("3").stdout("NOT DIVISIBLE\n", "NOT DIVISIBLE\n")
+        """input of 12 correctly gives output of 2^2 * 3"""
+        self.spawn("java Divisible2").stdin("12").stdout("2^2 * 3\n", "2^2 * 3\n")
