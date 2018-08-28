@@ -13,7 +13,7 @@ class LibraryTester(Checks):
     @check("exists")
     def compiles(self):
         """LibraryTester.java compiles"""
-        self.spawn("javac LibraryTester.java").exit(0)
+        self.spawn("javac Book.java Patron.java LibraryTester.java").exit(0)
 
     @check("exists")
     def test1(self):
