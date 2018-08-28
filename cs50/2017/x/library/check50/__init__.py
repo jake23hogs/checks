@@ -8,7 +8,7 @@ class LibraryTester(Checks):
         """LibraryTester.java exists"""
 		"""Book.java exists"""
 		"""Patron.java exists"""
-        self.require("LibraryTester.java", "Book.java", "Patron.java")
+        self.require("LibraryTester.java, Book.java, Patron.java")
 
     @check("exists")
     def compiles(self):
