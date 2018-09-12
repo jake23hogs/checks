@@ -33,6 +33,11 @@ class Prime(Checks):
         self.spawn("java Prime").stdin("197").stdout("true\n", "true\n")
 
     @check("compiles")
+    def test555(self):
+        """input of 555 yields output of false"""
+        self.spawn("java Prime").stdin("555").stdout("false\n", "false\n")
+
+    @check("compiles")
     def test_reject_negative(self):
         """rejects a negative input like -1"""
         self.spawn("java Prime").stdin("-1").reject()
