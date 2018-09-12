@@ -13,9 +13,9 @@ class Prime(Checks):
         self.spawn("javac Prime.java").exit(0)
 
     @check("compiles")
-    def test2(self):
-        """input of 2 yields output of true"""
-        self.spawn("java Prime").stdin("2").stdout("true\n", "true\n")
+    def test5(self):
+        """input of 5 yields output of true"""
+        self.spawn("java Prime").stdin("5").stdout("true\n", "true\n")
 
     @check("compiles")
     def test_reject_negative(self):
