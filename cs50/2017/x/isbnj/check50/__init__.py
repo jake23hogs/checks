@@ -47,12 +47,11 @@ class ISBN(Checks):
     @check("compiles")
     def ISBN_with_X(self):
         """rejects ISBNs with X as checksum"""
-        self.spawn("java ISBN").stdin("078974984X").reject()
-
+        self.spawn("java ISBN").stdin("078974984X").stdout("^Error!\n", "Error!\n").exit(0)
     @check("compiles")
     def rejects_ISBNs_with_dashes(self):
         """rejects ISBNs with dashes"""
-        self.spawn("java ISBN").stdin("0-789-75198-4").reject()
+        self.spawn("java ISBN").stdin("0-789-75198-4").stdout("^Error!\n", "Error!\n").exit(0)
 
     @check("compiles")
     def rejects_empty(self):
