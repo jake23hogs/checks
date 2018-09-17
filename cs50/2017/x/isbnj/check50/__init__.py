@@ -1,17 +1,17 @@
 from check50 import *
 
 
-class Credit(Checks):
+class ISBN(Checks):
     
     @check()
     def exists(self):
-        """Credit.java exists."""
-        self.require("Credit.java")
+        """ISBN.java exists."""
+        self.require("ISBN.java")
     
     @check("exists")
     def compiles(self):
-        """Credit.java compiles."""
-        self.spawn("javac Credit.java").exit(0)
+        """ISBN.java compiles."""
+        self.spawn("javac ISBN.java").exit(0)
     
     @check("compiles")
     def test1(self):
