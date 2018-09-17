@@ -41,4 +41,4 @@ class Caesar(Checks):
     @check("compiles")
     def handles_no_args(self):
         """handles lack of args[1]"""
-        self.spawn("java Caesar").stdout("Error!\n", "Error!\n").exit(0)
+        self.spawn("java Caesar").exit(1)
