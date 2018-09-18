@@ -25,8 +25,8 @@ class Divisible2(Checks):
     
     @check("compiles")
     def test3(self):
-        """input of 32 correctly gives output of 2^2"""
-        self.spawn("java Divisible2").stdin("32").stdout("2^2\n", "2^2\n")
+        """input of 32 correctly gives output of 2^5"""
+        self.spawn("java Divisible2").stdin("32").stdout("2^5\n", "2^5\n")
 
     @check("compiles")
     def test4(self):
