@@ -22,3 +22,13 @@ class Divisible2(Checks):
     def test2(self):
         """input of 12 correctly gives output of 2^2 * 3"""
         self.spawn("java Divisible2").stdin("12").stdout("2^2 * 3\n", "2^2 * 3\n")
+    
+    @check("compiles")
+    def test3(self):
+        """input of 32 correctly gives output of 2^2"""
+        self.spawn("java Divisible2").stdin("32").stdout("2^2\n", "2^2\n")
+
+    @check("compiles")
+    def test4(self):
+        """input of 17 correctly gives output of PRIME"""
+        self.spawn("java Divisible2").stdin("17").stdout("PRIME\n", "PRIME\n")
