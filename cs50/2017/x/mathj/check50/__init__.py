@@ -14,8 +14,3 @@ class MathQuiz(Checks):
     def compiles(self):
         """MathQuiz compiles"""
         self.spawn("javac MathQuiz.java").exit(0)
-
-    @check("compiles")
-    def test_reject_empty(self):
-        """rejects a non-numeric input of "" """
-        self.spawn("java MathQuiz").stdin("").reject()
