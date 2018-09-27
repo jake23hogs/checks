@@ -1,17 +1,17 @@
 from check50 import *
 
 
-class Divisible2(Checks):
+class Second(Checks):
 
     @check()
     def exists(self):
         """Demo exists"""
-        self.require("Divisible2.java")
+        self.require("Second.java")
 
     @check("exists")
     def compiles(self):
         """Divisible2 compiles""" 
-        self.spawn("javac Divisible2.java").exit(0)
+        self.spawn("javac Second.java").exit(0)
 
     @check("compiles")
     def test1(self):
