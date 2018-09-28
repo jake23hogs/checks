@@ -10,7 +10,7 @@ class Second(Checks):
 
     @check("exists")
     def compiles(self):
-        """Divisible2 compiles""" 
+        """Second compiles""" 
         self.spawn("javac Second.java").exit(0)
 
     @check("compiles")
