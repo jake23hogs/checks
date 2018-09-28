@@ -15,5 +15,5 @@ class Second(Checks):
 
     @check("compiles")
     def test1(self):
-        """input of 3 correctly gives output of PRIME"""
+        """input of 1 0 0 100 100 0 correctly gives output of 1, 112\n"""
         self.spawn("java Second").stdin("1  0  0  100 100 0").stdout("1, 112\n", "1, 112\n\n")
