@@ -1,23 +1,23 @@
 from check50 import *
 
-class First(Checks):
+class Fifth(Checks):
 
     @check()
     def exists(self):
-        """Demo exists"""
-        self.require("First.java")
+        """Fifth exists"""
+        self.require("Fifth.java")
 
    @check("exists")
    def compiles(self):
-        """First compiles""" 
-        self.spawn("javac First.java").exit(0)
+        """Fifth compiles""" 
+        self.spawn("javac Fifth.java").exit(0)
 
     @check("compiles")
     def test1(self):
-        """input of 1 3 correctly gives output of 0"""
-        self.spawn("java First")..stdin("1 3 ").stdout("0\n", "0\n")
+        """input of 2\n3 correctly gives output of 00\n01\n10\n11\n000\n001\n010\n011\n100\n101\n110\n111\n"""
+        self.spawn("java Fifth").stdin("2 3").stdout("00\n01\n10\n11\n000\n001\n010\n011\n100\n101\n110\n111\n", "00\n01\n10\n11\n000\n001\n010\n011\n100\n101\n110\n111\n")
 
     @check("compiles")
     def test2(self):
-        """input of 5 3 correctly gives output of 0"""
-        self.spawn("java First").stdin("5 3").stdout("1\n", "1\n")
+        """input of 2\n2 correctly gives output of 00\n01\n10\n11\n"""
+        self.spawn("java Fifth").stdin("2 2").stdout("00\n01\n10\n11\n", "00\n01\n10\n11\n")
