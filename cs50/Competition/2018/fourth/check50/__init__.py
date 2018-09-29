@@ -4,20 +4,15 @@ class First(Checks):
 
     @check()
     def exists(self):
-        """Demo exists"""
-        self.require("First.java")
+        """Fourth exists"""
+        self.require("Fourth.java")
 
    @check("exists")
    def compiles(self):
-        """First compiles""" 
-        self.spawn("javac First.java").exit(0)
+        """Fourth compiles""" 
+        self.spawn("javac Fourth.java").exit(0)
 
     @check("compiles")
     def test1(self):
-        """input of 1 3 correctly gives output of 0"""
-        self.spawn("java First")..stdin("1 3 ").stdout("0\n", "0\n")
-
-    @check("compiles")
-    def test2(self):
-        """input of 5 3 correctly gives output of 0"""
-        self.spawn("java First").stdin("5 3").stdout("1\n", "1\n")
+        """input of ab+CA--d* correctly gives output of (((a+b)-(C-A))*d)\n(a+b-(C-A))*d"""
+        self.spawn("java Fourth").stdin("ab+CA--d*").stdout("(((a+b)-(C-A))*d)\n(a+b-(C-A))*d\n", "(((a+b)-(C-A))*d)\n(a+b-(C-A))*d\n")
