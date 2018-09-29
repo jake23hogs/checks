@@ -9,7 +9,7 @@ class Third(Checks):
 
    @check("exists")
    def compiles(self):
-        """First compiles""" 
+        """Third compiles""" 
         self.spawn("javac Third.java").exit(0)
 
     @check("compiles")
