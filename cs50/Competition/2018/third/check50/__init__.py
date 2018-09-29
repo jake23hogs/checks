@@ -1,23 +1,18 @@
 from check50 import *
 
-class First(Checks):
+class Third(Checks):
 
     @check()
     def exists(self):
-        """Demo exists"""
-        self.require("First.java")
+        """Third exists"""
+        self.require("Third.java")
 
    @check("exists")
    def compiles(self):
         """First compiles""" 
-        self.spawn("javac First.java").exit(0)
+        self.spawn("javac Third.java").exit(0)
 
     @check("compiles")
     def test1(self):
-        """input of 1 3 correctly gives output of 0"""
-        self.spawn("java First")..stdin("1 3 ").stdout("0\n", "0\n")
-
-    @check("compiles")
-    def test2(self):
-        """input of 5 3 correctly gives output of 0"""
-        self.spawn("java First").stdin("5 3").stdout("1\n", "1\n")
+        """input of 10 5 + 2 3 - - 2 * correctly gives output of 32"""
+        self.spawn("java Third")..stdin("10 5 + 2 3 - - 2 *").stdout("32\n", "32\n")
