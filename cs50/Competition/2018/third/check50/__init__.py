@@ -1,5 +1,6 @@
 from check50 import *
 
+
 class Third(Checks):
 
     @check()
@@ -7,8 +8,8 @@ class Third(Checks):
         """Third exists"""
         self.require("Third.java")
 
-   @check("exists")
-   def compiles(self):
+    @check("exists")
+    def compiles(self):
         """Third compiles""" 
         self.spawn("javac Third.java").exit(0)
 
