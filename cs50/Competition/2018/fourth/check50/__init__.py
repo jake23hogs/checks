@@ -14,5 +14,5 @@ class First(Checks):
 
     @check("compiles")
     def test1(self):
-        """input of ab+CA--d* correctly gives output of (((a+b)-(C-A))*d)\n(a+b-(C-A))*d"""
+        """input of ab+CA--d* correctly gives output of (((a+b)-(C-A))*d)newline(a+b-(C-A))*d"""
         self.spawn("java Fourth").stdin("ab+CA--d*").stdout("(((a+b)-(C-A))*d)\n(a+b-(C-A))*d\n", "(((a+b)-(C-A))*d)\n(a+b-(C-A))*d\n")
