@@ -7,8 +7,8 @@ class First(Checks):
         """Fourth exists"""
         self.require("Fourth.java")
 
-   @check("exists")
-   def compiles(self):
+    @check("exists")
+    def compiles(self):
         """Fourth compiles""" 
         self.spawn("javac Fourth.java").exit(0)
 
