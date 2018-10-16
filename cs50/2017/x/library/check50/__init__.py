@@ -15,9 +15,9 @@ class LibraryTester(Checks):
         """LibraryTester.java compiles"""
         self.spawn("javac LibraryTester.java Book.java Patron.java").exit(0)
 
-    #@check("compiles")
-    #def test1(self):
-    #    """Correctly Outputs"""
-    #    self.spawn("java LibraryTester").stdout("true\n", "true\n").stdout("true\n", "true\n").stdout("false\n", "false\n").exit(0)
+    @check("compiles")
+    def test1(self):
+        """Correctly Outputs"""
+        self.spawn("java LibraryTester").stdout("true\n", "true\n").stdout("true\n", "true\n").stdout("false\n", "false\n").exit(0)
 
     
