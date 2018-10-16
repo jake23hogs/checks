@@ -18,6 +18,6 @@ class LibraryTester(Checks):
     @check("compiles")
     def test1(self):
         """Correctly Outputs"""
-        self.spawn("java LibraryTester").stdout("true\n", "true\n").stdout("true\n", "true\n").stdout("false\n", "false\n").exit(0)
+        self.spawn("java LibraryTester").stdout("true\ntrue\ntrue\nfalse\n", "true\ntrue\ntrue\nfalse\n").exit(0)
 
     
