@@ -26,10 +26,10 @@ class LibraryTester(Checks):
 	+ "Patron's name:  Ken Lambert\nTitle:  Cider House Rules\nAuthor: John Irving\n\n"
 	+ "Title:  The Perfect Storm\nAuthor: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n\n"
 	+ "true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle:  The Perfect Storm\n"
-	+ "Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer", "true\ntrue\ntrue\nfalse\n"
+	+ "Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n", "true\ntrue\ntrue\nfalse\n"
 	+ "Patron's name:  Ken Lambert\nTitle:  Cider House Rules\nAuthor: John Irving\n\n"
 	+ "Title:  The Perfect Storm\nAuthor: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n\n"
 	+ "true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle:  The Perfect Storm\n"
-	+ "Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer").exit(0)
+	+ "Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n").exit(0)
 
     
