@@ -23,13 +23,13 @@ class LibraryTester(Checks):
 	true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle:  The Perfect Storm\n
 	Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer"""
         self.spawn("java LibraryTester").stdout("true\ntrue\ntrue\nfalse\n"
-	+ "Patron's name:  Ken Lambert\nTitle:  Cider House Rules\nAuthor: John Irving\n\n"
-	+ "Title:  The Perfect Storm\nAuthor: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n\n"
-	+ "true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle:  The Perfect Storm\n"
-	+ "Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n", "true\ntrue\ntrue\nfalse\n"
-	+ "Patron's name:  Ken Lambert\nTitle:  Cider House Rules\nAuthor: John Irving\n\n"
-	+ "Title:  The Perfect Storm\nAuthor: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n\n"
-	+ "true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle:  The Perfect Storm\n"
-	+ "Author: Sebastian Junger\n\nTitle:  The Illiad\nAuthor: Homer\n").exit(0)
+	+ "Patron's name:  Ken Lambert\nTitle: Cider House Rules\nAuthor: John Irving\n\n"
+	+ "Title: The Perfect Storm\nAuthor: Sebastian Junger\n\nTitle: The Illiad\nAuthor: Homer\n\n"
+	+ "true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle: The Perfect Storm\n"
+	+ "Author: Sebastian Junger\n\nTitle: The Illiad\nAuthor: Homer\n", "true\ntrue\ntrue\nfalse\n"
+	+ "Patron's name:  Ken Lambert\nTitle: Cider House Rules\nAuthor: John Irving\n\n"
+	+ "Title: The Perfect Storm\nAuthor: Sebastian Junger\n\nTitle: The Illiad\nAuthor: Homer\n\n"
+	+ "true\nfalse\ntrue\nPatron's name:  Ken Lambert\nTitle: The Perfect Storm\n"
+	+ "Author: Sebastian Junger\n\nTitle: The Illiad\nAuthor: Homer\n").exit(0)
 
     
