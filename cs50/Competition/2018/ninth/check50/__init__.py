@@ -26,4 +26,4 @@ class Ninth(Checks):
     @check("compiles")
     def test3(self):
         """Outputs 15489 for the max number"""
-        self.spawn("java Ninth").stdin("15489 3255 7521 1 012199 06654 7020 685 38 71 111 221").stdout("721\n", "721\n").exit(0)
+        self.spawn("java Ninth").stdin("15489 3255 7521 1 012199 06654 7020 685 38 71 111 221").stdout("15489\n", "15489\n").exit(0)
