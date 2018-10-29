@@ -2,13 +2,6 @@ from check50 import *
 
 
 class Crack(Checks):
-
-    #@check()
-    #def exists(self):
-        #    """Crack.java exists."""
-        #    self.require("Tenth.java")
-
-        
         
     @check()
     def compiles(self):
