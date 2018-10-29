@@ -1,3 +1,17 @@
 *
 !Crack.java
+!Crypt.java
+!B64.java
+!CharEncoding.java
+!Charsets.java
+!MessageDigestAlgorithms.java
+!Sha2Crypt.java
+!UnixCrypt.java
 #Crack.java
+#Crypt.java
+#B64.java
+#CharEncoding.java
+#Charsets.java
+#MessageDigestAlgorithms.java
+#Sha2Crypt.java
+#UnixCrypt.java
