@@ -4,7 +4,6 @@
 !B64.java
 !CharEncoding.java
 !Charsets.java
-!DigestUtils.java
 !MessageDigestAlgorithms.java
 !Sha2Crypt.java
 !UnixCrypt.java
@@ -13,7 +12,6 @@
 #B64.java
 #CharEncoding.java
 #Charsets.java
-#DigestUtils.java
 #MessageDigestAlgorithms.java
 #Sha2Crypt.java
 #UnixCrypt.java
