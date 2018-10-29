@@ -13,7 +13,7 @@ class Crack(Checks):
         """Correctly cracks maria:509nVI8B9VfuA"""
         self.spawn("java Crack 509nVI8B9VfuA").stdout("TF\n", "TF\n").exit(0)
 
-   # @check("compiles")
-   # def test2(self):
-   #     """Correctly cracks brian:50mjprEcqC/ts"""
-   #     self.spawn("java Crack 50mjprEcqC/ts").stdout("CA\n", "CA\n).exit(0)
+    @check("compiles")
+    def test2(self):
+        """Correctly cracks brian:50mjprEcqC/ts"""
+        self.spawn("java Crack 50mjprEcqC/ts").stdout("CA\n", "CA\n).exit(0)
