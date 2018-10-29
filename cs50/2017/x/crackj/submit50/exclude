@@ -18,6 +18,14 @@
 !DigestUtils.java
 !Hex.java
 #Crack.java
+#Crack.class
+#Crypt.class
+#B64.class
+#CharEncoding.class
+#Charsets.class
+#UnixCrypt.class
+#Sha2Crypt.class
+#MessageDigestAlgorithms.class
 #Crypt.java
 #B64.java
 #CharEncoding.java
