@@ -1,18 +1,17 @@
 from check50 import *
 
 
-# Coming soon...
 class Crack(Checks):
 
-    @check()
-    def exists(self):
-        """Crack.java exists."""
-        self.require("Tenth.java")
+    #@check()
+    #def exists(self):
+    #    """Crack.java exists."""
+    #    self.require("Tenth.java")
     
-    @check("exists")
+    @check()
     def compiles(self):
         """Crack.java compiles."""
-        self.spawn("javac Crack.java").exit(0)
+        self.spawn("javac Crack.java Crypt.java B64.java CharEncoding.java Charsets.java DigestUtils.java MessageDigestAlgorithms.java Sha2Crypt.java UnixCrypt.java").exit(0)
     
     @check("compiles")
     def test1(self):
