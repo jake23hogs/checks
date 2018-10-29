@@ -8,6 +8,8 @@
 !CharEncoding.class
 !Charsets.class
 !Crypt.class
+!DigestUtils.java
+#DigestUtils.java
 !MessageDigestAlgorithms.class
 !Sha2Crypt.class
 !UnixCrypt.class
