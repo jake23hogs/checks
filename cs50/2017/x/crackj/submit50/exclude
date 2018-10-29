@@ -15,8 +15,6 @@
 !MessageDigestAlgorithms.java
 !Sha2Crypt.java
 !UnixCrypt.java
-!DigestUtils.java
-!Hex.java
 #Crack.java
 #Crack.class
 #Crypt.class
@@ -33,5 +31,4 @@
 #MessageDigestAlgorithms.java
 #Sha2Crypt.java
 #UnixCrypt.java
-#DigestUtils.java
-#Hex.java
+
