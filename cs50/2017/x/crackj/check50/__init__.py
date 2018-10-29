@@ -11,6 +11,7 @@ class Crack(Checks):
     @check()
     def test1(self):
         """Correctly cracks maria:509nVI8B9VfuA"""
+        self.spawn("javac Crack.java").exit(0)
         self.spawn("java Crack 509nVI8B9VfuA").stdout("TF\n", "TF\n").exit(0)
 
    # @check("compiles")
