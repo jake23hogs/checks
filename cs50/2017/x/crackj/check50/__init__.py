@@ -6,7 +6,7 @@ class Crack(Checks):
     @check()
     def compiles(self):
         """Crack.java compiles"""
-        self.spawn("javac Crack.java B64.java CharEncoding.java Charsets.java Crypt.java DigestUtils.java Hex.java MessageDigestAlgorithms.java Sha2Crypt.java UnixCrypt.java").exit(0)
+        self.spawn("javac Crack.java").exit(0)
     
     @check()
     def test1(self):
