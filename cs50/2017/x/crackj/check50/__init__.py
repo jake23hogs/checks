@@ -3,10 +3,10 @@ from check50 import *
 
 class Crack(Checks):
         
-    @check()
-    def compiles(self):
-        """Crack.java compiles"""
-        self.spawn("javac Crack.java").exit(0)
+   # @check()
+   # def compiles(self):
+   #     """Crack.java compiles"""
+   #     self.spawn("javac Crack.java").exit(0)
     
     @check()
     def test1(self):
