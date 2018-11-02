@@ -56,4 +56,4 @@ class Vigenere(Checks):
     @check("compiles")
     def reject(self):
         """rejects "Hax0r2" as keyword"""
-        self.spawn("java Vigenere Hax0r2").exit(1)
+        self.spawn("java Vigenere Hax0r2").exit(0)
