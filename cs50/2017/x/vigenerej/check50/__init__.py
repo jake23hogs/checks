@@ -46,12 +46,12 @@ class Vigenere(Checks):
     @check("compiles")
     def noarg(self):
         """handles lack of argv[1]"""
-        self.spawn("java Vigenere").exit(1)
+        self.spawn("java Vigenere").exit(0)
 
     @check("compiles")
     def toomanyargs(self):
         """handles argc > 2"""
-        self.spawn("java Vigenere 1 2 3").exit(1)
+        self.spawn("java Vigenere 1 2 3").exit(0)
 
     @check("compiles")
     def reject(self):
