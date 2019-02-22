@@ -1,23 +1,18 @@
 from check50 import *
 
-class First(Checks):
+class Recursion5(Checks):
 
     @check()
     def exists(self):
-        """Demo exists"""
-        self.require("First.java")
+        """Recursion5 exists"""
+        self.require("Recursion5.java")
 
    @check("exists")
    def compiles(self):
-        """First compiles""" 
-        self.spawn("javac First.java").exit(0)
+        """Recursion5 compiles""" 
+        self.spawn("javac Recursion5.java").exit(0)
 
     @check("compiles")
     def test1(self):
-        """input of 1 3 correctly gives output of 0"""
-        self.spawn("java First")..stdin("1 3 ").stdout("0\n", "0\n")
-
-    @check("compiles")
-    def test2(self):
-        """input of 5 3 correctly gives output of 0"""
-        self.spawn("java First").stdin("5 3").stdout("1\n", "1\n")
+        """input of 3 correctly gives output of 0"""
+        self.spawn("java Recursion5")..stdin("3").stdout("0\n", "0\n")
