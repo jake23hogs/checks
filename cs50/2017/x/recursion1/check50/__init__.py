@@ -20,4 +20,4 @@ class Recursion1(Checks):
     @check("compiles")
     def test2(self):
         """input of 5 correctly gives output of 5! = 120"""
-        self.spawn("java Recursion1")..stdin("5").stdout("5! = 120\n", "5! = 120\n")
+        self.spawn("java Recursion1").stdin("5").stdout("5! = 120\n", "5! = 120\n")
