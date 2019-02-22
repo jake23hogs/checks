@@ -1,6 +1,6 @@
 from check50 import *
 
-class First(Checks):
+class Recursion1(Checks):
 
     @check()
     def exists(self):
