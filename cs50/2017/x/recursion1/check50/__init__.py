@@ -7,8 +7,8 @@ class Recursion1(Checks):
         """Recursion1 exists"""
         self.require("Recursion1.java")
 
-   @check("exists")
-   def compiles(self):
+    @check("exists")
+    def compiles(self):
         """Recursion1 compiles""" 
         self.spawn("javac Recursion1.java").exit(0)
 
