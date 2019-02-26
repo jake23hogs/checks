@@ -24,5 +24,5 @@ class Recursion1(Checks):
     
     @check("compiles")
     def test3(self):
-        """input of 19 correctly gives output of 10! = 3628800"""
+        """input of 10 correctly gives output of 10! = 3628800"""
         self.spawn("java Recursion1").stdin("10").stdout("10! = 3628800\n", "10! = 3628800\n")
